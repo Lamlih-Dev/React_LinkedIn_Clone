@@ -5,8 +5,7 @@ import Avatar from "../../images/avatar.jpg"
 import Logo from "../../images/logo.svg"
 import Search from "../../images/search.svg"
 
-function Header() {
-  
+const Header = () => {
     return (
         <nav>
             <div className="container">
@@ -16,7 +15,7 @@ function Header() {
                             <a class="navbar-brand" href="/">
                                 <img src={Logo} alt="logo-icon" />
                             </a>
-                            <form class="d-flex" role="search">
+                            <form class="d-flex header-form" role="search">
                                 <img src={Search} alt="search-icon" />
                                 <input class="nav-search form-control me-2" type="search" placeholder="Search" aria-label="Search" />
                             </form>

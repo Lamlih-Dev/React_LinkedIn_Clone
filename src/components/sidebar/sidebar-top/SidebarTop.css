@@ -1,0 +1,108 @@
+.sidebar-top{
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #E0DFDC;
+    background-color: white;
+}
+.sidebar-top .header{
+    text-align: center;
+}
+.sidebar-top .header .sidebar-top-cover{
+    object-fit: cover;
+    text-align: center;
+    width: 100%;
+}
+.sidebar-top .header h3{
+    font-size: 1em;
+}
+.sidebar-top .header h3 a{
+    text-decoration: none;
+    color: black;
+}
+.sidebar-top .header h3 a:hover{
+    text-decoration: underline;
+}
+.sidebar-top .header p{
+    font-size: 12px;
+    color: rgba(0,0,0,0.6);
+}
+.sidebar-top .sidebar-top-avatar{
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    border: 2px solid white;
+    margin-top: -16%;
+    margin-bottom: 20px;
+}
+.sidebar-top .stats{
+    border-top: 1px solid #E0DFDC;
+    border-bottom: 1px solid #E0DFDC;
+    padding: 10px 0px;
+}
+.sidebar-top .stats .stat{
+    display: flex;
+    justify-content: space-around;
+    cursor: pointer;
+}
+.sidebar-top .stats .stat:hover{
+    background-color: #EBEBEB;
+}
+.sidebar-top .stats .stat p{
+    font-size: 12px;
+    margin: 3px;
+    font-weight: 500;
+    color: rgba(0,0,0,0.6);
+}
+.sidebar-top .stats .stat .stat-number{
+    color: #0a66c2;
+}
+.sidebar-top .premium{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    cursor: pointer;
+    padding: 10px 10px;
+    border-bottom: 1px solid #E0DFDC;
+}
+.sidebar-top .premium:hover{
+    background-color: #EBEBEB;
+}
+.sidebar-top .premium p{
+    font-size: 12px;
+    font-weight: 500;
+    color: rgba(0,0,0,0.6);
+    margin: 0;
+}
+.sidebar-top .premium img{
+    margin-right: 5px;
+}
+.sidebar-top .premium .try-premium{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.sidebar-top .premium .try-premium p{
+    color: black;
+    font-weight: 700;
+}
+.sidebar-top .premium:hover .try-premium p{
+    color: #0a66c2;
+}
+.sidebar-top .items{
+    display: flex;
+    align-items: center;
+    padding: 15px 10px;
+    cursor: pointer;
+}
+.sidebar-top .items:hover{
+    background-color: #EBEBEB;
+}
+.sidebar-top .items p{
+    font-size: 12px;
+    font-weight: 700;
+    color: rgba(0,0,0,0.6);
+    margin: 0;
+}
+.sidebar-top .items img{
+    margin-right: 5px;
+}

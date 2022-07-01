@@ -1,6 +1,6 @@
 import React from 'react'
 
-function HeaderItem({ customLinkClass, icon, title, notifications }) {
+const HeaderItem = ({ customLinkClass, icon, title, notifications }) => {
 
   const activeStatus = (e) => {
     const links = document.querySelectorAll(".nav-link");
