@@ -1,6 +1,8 @@
 .sidebar-bottom{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 70px;
     border-radius: 10px;
-    overflow: hidden;
     border: 1px solid #E0DFDC;
     background-color: white;
     margin-top: 6px;

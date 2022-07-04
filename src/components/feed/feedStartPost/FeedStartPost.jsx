@@ -1,5 +1,4 @@
 import React from 'react'
-import Avatar from "../../../images/avatar.jpg"
 import FeedPhoto from "../../../images/feed-photo.svg"
 import FeedVideo from "../../../images/feed-video.svg"
 import FeedEvent from "../../../images/feed-event.svg"
@@ -15,11 +14,11 @@ export const FeedPostOption = ({ title, icon }) => {
       )
 }
 
-const FeedStartPost = ({sendPost, input, setInput}) => {
+const FeedStartPost = ({sendPost, input, setInput, avatar}) => {
   return (
     <div className='feed-start-post'>
         <form className="feed-form">
-            <img src={Avatar} alt="avatar" />
+            <img src={avatar} alt="avatar" />
             <input value={input} onChange={e => setInput(e.target.value)} type="text" placeholder='Start a post'/>
             <input onClick={sendPost} type="submit"/>
         </form>

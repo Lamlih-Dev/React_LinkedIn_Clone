@@ -1,0 +1,133 @@
+.login .body{
+    padding: 24px 0px;
+}
+.login .content h2{
+    margin: 24px 0px;
+    font-weight: 400;
+}
+.login .form-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login .form-container form{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    border-radius: 10px;
+    width: 35%;
+}
+.login .form-container form p{
+    font-size: 12px;
+}
+.login .form-container form p span{
+    color: #0a66c2;
+    font-weight: 500;
+    cursor: pointer;
+}
+.login .form-container form p span a{
+    color: #0a66c2;
+    text-decoration: none;
+}
+.login .form-container form p span:hover{
+    text-decoration: underline;
+}
+.login .form-container form input{
+    width: 100%;
+    height: 32px;
+    padding-left: 10px;
+    border-radius: 5px;
+    border: 1px solid silver;
+    margin-bottom: 16px;
+}
+.login .form-container form label{
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+.login .form-container form .btn-submit{
+    width: 100%;
+    background-color: #0a66c2;
+    color: white;
+    padding: 12px 0px;
+    border-radius: 30px;
+    border: 0px;
+    font-weight: 600;
+    transition: all .2s ease;
+}
+.login .form-container form .btn-submit:hover{
+    background-color: #004182;
+}
+.login .form-container form .btn-submit:hover{
+    background-color: #004182;
+}
+.login .form-container .separator{
+    margin-top: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.login .form-container .separator hr{
+    width: 35%;
+}
+.login .form-container .google-auth{
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid silver;
+    border-radius: 20px;
+    padding: 10px 0px;
+}
+.login .form-container .google-auth:hover{
+    background-color: #F7FAFF;
+}   
+.login .form-container .google-auth p{
+    margin: 0 0 0 10px;
+    font-weight: 500;
+    font-size: 14px;
+}
+.login .form-container .bottom-side{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login .form-container .bottom-side p{
+    font-size: 1em;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+.login p{
+    font-size: 14px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+.login p span a{
+    color: #0a66c2;
+    text-decoration: none;
+}
+.login p span{
+    color: #0a66c2;
+    font-weight: 500;
+    cursor: pointer;
+}
+.login p span:hover{
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 1200px) {
+    .login{
+        background: white;
+    }
+    .login .form-container form{
+        width: 100%;
+    }
+    .login .form-container form .p-holder{
+        width: 100%;
+    }
+}

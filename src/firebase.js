@@ -1,6 +1,7 @@
 import firebase from 'firebase/compat/app'
 import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
+import { GoogleAuthProvider, signInWithPopup } from "firebase/auth"; 
 
 const firebaseConfig = {
     apiKey: "AIzaSyDP_k87hDSX-VaCeCynVC8Jeii-kO_k1PI",
@@ -15,4 +16,9 @@ const firebaseApp = firebase.initializeApp(firebaseConfig);
 const db = firebaseApp.firestore();
 const auth = firebase.auth();
 
-export { db, auth };
+const googleSignIn = () =>{
+    const provider = new GoogleAuthProvider();
+    signInWithPopup(auth, provider);
+}
+
+export { db, auth, googleSignIn };

@@ -1,7 +1,5 @@
 .sidebar{
     flex: 0.2;
-    height: fit-content;
-    overflow: hidden;
 }
 
 @media screen and (max-width: 991px) {

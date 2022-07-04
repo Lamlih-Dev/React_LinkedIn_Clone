@@ -61,6 +61,100 @@ a.nav-link{
     padding: 0px 18px!important;
     color: #666666;
 }
+a.nav-link .dropdown-menu{
+    visibility: hidden;
+    position: absolute;
+    top: 55px;
+    right: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-content: center;
+    border-radius: 8px 0px 8px 8px;
+    width: 300px;
+    box-shadow:
+        0.4px 0.5px 0.5px rgba(0, 0, 0, 0.017),
+        1.1px 1.3px 1.5px rgba(0, 0, 0, 0.025),
+        2.7px 3px 3.6px rgba(0, 0, 0, 0.033),
+        9px 10px 12px rgba(0, 0, 0, 0.05)
+    ;
+}
+a.nav-link .dropdown-menu.visible{
+    visibility: visible;
+}
+a.nav-link .dropdown-menu .dropdown-header{
+    padding: 2px 10px;
+}
+a.nav-link .dropdown-menu hr{
+    margin: 6px 0px;
+}
+a.nav-link .dropdown-menu .dropdown-header .top-side{
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    overflow: hidden;
+}
+a.nav-link .dropdown-menu .dropdown-header .top-side img{
+    margin-right: 8px;
+}
+a.nav-link .dropdown-menu .dropdown-header .top-side h2,
+a.nav-link .dropdown-menu .dropdown-account h2,
+a.nav-link .dropdown-menu .dropdown-manage h2{
+    font-size: 1.15em;
+    margin: 0;
+}
+a.nav-link .dropdown-menu .dropdown-header .top-side p{
+    margin: 0;
+}
+a.nav-link .dropdown-menu .dropdown-header a{
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 500;
+    width: 100%;
+    text-align: center;
+    border: 1px solid blue;
+    margin-top: 10px;
+    border-radius: 20px;
+    padding: 2px 0px;
+}
+a.nav-link .dropdown-menu .dropdown-account,
+a.nav-link .dropdown-menu .dropdown-manage{
+    padding: 8px 10px;
+}
+a.nav-link .dropdown-menu .dropdown-account .try-premium{
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+}
+a.nav-link .dropdown-menu .dropdown-account .try-premium p{
+    color: black;
+    font-weight: 500;
+    margin: 0 0 0 5px;
+    font-size: 13px;
+}
+a.nav-link .dropdown-menu .dropdown-account .try-premium:hover p{
+    color: #0a66c2;
+    text-decoration: none;
+}
+a.nav-link .dropdown-menu .dropdown-account p{
+    margin: 5px 0px;
+    font-size: 14px;
+}
+a.nav-link .dropdown-menu .dropdown-account p:hover,
+a.nav-link .dropdown-menu .dropdown-manage p:hover,
+a.nav-link .dropdown-menu .sign-out:hover{
+    text-decoration: underline;
+}
+a.nav-link .dropdown-menu .dropdown-manage p{
+    margin: 5px 0px;
+    font-size: 14px;
+}
+a.nav-link .dropdown-menu .sign-out{
+    padding: 3px 10px;
+    font-size: 14px;
+    margin: 0;
+}
 a.nav-link.active{
     color: #191919;
 }

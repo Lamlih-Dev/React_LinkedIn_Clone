@@ -1,14 +1,16 @@
 import React, { useEffect, useState } from 'react'
 import FeedStartPost from "./feedStartPost/FeedStartPost"
 import Post from "./post/Post"
-import Avatar from "../../images/avatar.jpg"
 import firebase from 'firebase/compat/app'
 import { db } from "../../firebase";
 import "./Feed.css"
+import { useSelector } from 'react-redux';
+import { selectUser } from '../../features/userSlice';
 
 const Feed = () => {
   const [posts, setPosts] = useState([]);
   const [input, setInput] = useState("");
+  const user = useSelector(selectUser);
 
   useEffect(()=>{ 
     db.collection("posts").orderBy('timestamp', 'desc').onSnapshot((snapshot) =>
@@ -25,8 +27,8 @@ const Feed = () => {
     e.preventDefault();
     if(input !== ""){
       db.collection("posts").add({  
-        avatar: Avatar,
-        name: "Ahmed Lamlih",
+        avatar: user.photoURL,
+        name: user.displayName,
         description: "Front-end Web Developer",
         content: input,
         timestamp: firebase.firestore.FieldValue.serverTimestamp()
@@ -39,7 +41,7 @@ const Feed = () => {
 
   return (
     <div className='feed'>
-      <FeedStartPost sendPost={sendPost} input={input} setInput={setInput} />
+      <FeedStartPost sendPost={sendPost} input={input} setInput={setInput} avatar={user.photoURL} />
       {posts.map(({id, data: { avatar, name, description, content, timestamp }})=>(
         <Post 
           key={id}

@@ -1,11 +1,36 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import "./Header.css"
 import HeaderItem from './headerItem/HeaderItem'
-import Avatar from "../../images/avatar.jpg"
 import Logo from "../../images/logo.svg"
 import Search from "../../images/search.svg"
+import TryPremium from '../../images/tryPremium.svg'
+import { logout, selectUser } from "../../features/userSlice"
+import { auth } from "../../firebase"
 
 const Header = () => {
+
+    const dispatch = useDispatch();
+    const user = useSelector(selectUser);
+
+    useEffect(()=>{
+        const dropdown = document.getElementById("dropdown-menu");
+        if(dropdown){
+            dropdown.classList.remove("visible");
+        }
+    }, [])
+
+    const showDropDownMeny = (e) =>{
+        e.preventDefault();
+        const dropdown = document.getElementById("dropdown-menu");
+        dropdown?.classList.toggle("visible");
+    }
+
+    const logoutOfApp = () =>{
+        dispatch(logout());
+        auth.signOut();
+    }
+
     return (
         <nav>
             <div className="container">
@@ -48,13 +73,44 @@ const Header = () => {
                                 icon={<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" class="mercado-match" width="24" height="24" focusable="false"><path d="M22 19h-8.28a2 2 0 11-3.44 0H2v-1a4.52 4.52 0 011.17-2.83l1-1.17h15.7l1 1.17A4.42 4.42 0 0122 18zM18.21 7.44A6.27 6.27 0 0012 2a6.27 6.27 0 00-6.21 5.44L5 13h14z"></path></svg>}
                                 title="Notifications"
                             />
-                            <a className="nav-link" href="#">
-                                <img src={Avatar} className="avatar" alt="avatar" width="24" height="24"/>
+                            <a className="nav-link" onClick={showDropDownMeny} href="/">
+                                <img key={user.photoURL} src={user.photoURL} className="avatar" alt="avatar" width="24" height="24"/>
                                 <div className="content">
                                     <span className='nav-title'>Me</span>
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" data-supported-dps="16x16" fill="currentColor" class="mercado-match" width="16" height="16" focusable="false">
                                         <path d="M8 11L3 6h10z" fill-rule="evenodd"></path>
                                     </svg>
+                                </div>
+                                <div id="dropdown-menu" className="dropdown-menu visible">
+                                    <div className="dropdown-header">
+                                        <div className="top-side">
+                                            <img src={user.photoURL} className="avatar" alt="avatar" width="55" height="55"/>
+                                            <div className="dropdown-header-infos">
+                                                <h2>{user.displayName}</h2>
+                                                <p>Front-end Web Developer</p>
+                                            </div>
+                                        </div>
+                                        <a href='/'>View Profile</a>
+                                    </div>
+                                    <hr />
+                                    <div className="dropdown-account">
+                                        <h2>Account</h2>
+                                        <div className="try-premium">
+                                            <img src={TryPremium} alt="icon" width="17px" height="17px" />
+                                            <p>Try Premium for free</p>
+                                        </div>
+                                        <p>Settings &amp; Privacy</p>
+                                        <p>Help</p>
+                                        <p>Language</p>
+                                    </div>
+                                    <hr />
+                                    <div className="dropdown-manage">
+                                        <h2>Manage</h2>
+                                        <p>Post &amp; Activity</p>
+                                        <p>Job Posting Account</p>
+                                    </div>
+                                    <hr />
+                                    <p className='sign-out' onClick={logoutOfApp}>Sign Out</p>
                                 </div>
                             </a>
                             <HeaderItem 

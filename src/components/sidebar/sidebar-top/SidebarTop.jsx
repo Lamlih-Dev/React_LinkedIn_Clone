@@ -1,18 +1,21 @@
-import React from 'react'
-import Avatar from '../../../images/avatar.jpg'
+import React, { useEffect, useState } from 'react'
 import Cover from '../../../images/cover.jfif'
 import TryPremium from '../../../images/tryPremium.svg'
 import Items from '../../../images/items.svg'
 import "./SidebarTop.css"
+import { useSelector } from 'react-redux'
+import { selectUser } from '../../../features/userSlice'
 
 const SidebarTop = () => {
+    const user = useSelector(selectUser);
+
   return (
     <div className='sidebar-top'>
         <div className="header">
             <img className='sidebar-top-cover' src={Cover} alt="" />
-            <img className='sidebar-top-avatar' src={Avatar} alt="" />
+            <img className='sidebar-top-avatar' src={user.photoURL} alt="" />
             <h3>
-                <a href="#">Ahmed Lamlih</a>
+                <a href="#">{user.displayName}</a>
             </h3>
             <p>Front-end Web Developer</p>
         </div>
