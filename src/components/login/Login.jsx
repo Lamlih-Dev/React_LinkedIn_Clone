@@ -40,12 +40,14 @@ const Login = () => {
         userAuth.user.updateProfile({
           displayName: fullname,
           photoURL: avatarurl,
+          description: "New User",
         }).then(()=>{
           dispatch(login({
             email: userAuth.user.email,
             uid : userAuth.user.uid,
             displayName: fullname,
             photoURL: avatarurl,
+            description: "New User",
           }))
         })
       }).catch(error => alert(error));
@@ -70,6 +72,7 @@ const Login = () => {
         uid: userAuth.user.uid,
         displayName: userAuth.user.displayName,
         profileUrl: userAuth.user.profileUrl,
+        description: userAuth.user.description,
       }))
     }).catch(error => {
       if(!e instanceof TypeError){

@@ -1,0 +1,43 @@
+.widgets{
+    flex: 0.3;
+}
+.sticky{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 70px;  
+}
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.footer div{
+    display: flex;
+    justify-content: space-around;
+    width: 70%;
+}
+.footer a{
+    color: rgba(0,0,0,0.6);
+    text-decoration: none;
+    font-size: 12px;
+    margin: 3px 0px;
+}
+.footer a:hover{
+    color: #0A66C2;
+    text-decoration: underline;
+}
+.footer p{
+    font-size: 12px;
+    margin: 10px 0 0 0;
+}
+.footer p img{
+    margin-right: 5px;
+}
+
+@media screen and (max-width: 1030px) {
+    .widgets{
+        display: none;        
+    }
+}

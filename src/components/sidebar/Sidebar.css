@@ -2,8 +2,33 @@
     flex: 0.2;
 }
 
+@media screen and (max-width: 1199px) {
+    .sidebar .sidebar-top{
+        width: 180px;
+    }
+}
+@media screen and (max-width: 1030px) {
+    .sidebar{
+        flex: 0.2;
+    }
+    .sidebar .sidebar-top{
+        width: auto;
+    }
+}
 @media screen and (max-width: 991px) {
     .sidebar{
-        flex: 0.4;
+        flex: 0.3;
+    }
+}
+@media screen and (max-width: 767px) {
+    .sidebar{
+        flex: 1;
+    }
+    .sidebar-top .stats .stat{
+        justify-content: flex-start !important;
+        padding-left: 10px;
+    }
+    .sidebar-bottom{
+        margin-bottom: 10px;
     }
 }

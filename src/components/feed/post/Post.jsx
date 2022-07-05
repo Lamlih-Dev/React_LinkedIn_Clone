@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './Post.css'
 import VisibilityPublic from "../../../images/post-public.svg"
 import ThreeDots from "../../../images/three-dots.svg"
@@ -16,7 +16,33 @@ export const PostActions = ({ title, icon }) => {
       )
 }
 
-const Post = ({ avatar, name, description, content }) => {
+const Post = ({ avatar, name, description, content, timestamp }) => {
+    const [postSeniority, setPostSeniority] = useState("");
+    
+    useEffect(()=>{
+        if(!timestamp?.seconds){
+            setPostSeniority("0s");
+        }else{
+            const todayDate = new Date();
+            const postDate = new Date(timestamp.seconds * 1000);    
+            let seconds = Math.floor((todayDate - (postDate))/1000);
+            let minutes = Math.floor(seconds/60);
+            let hours = Math.floor(minutes/60);
+            let days = Math.floor(hours/24);
+
+            setPostSeniority(seconds + "s")
+            if(seconds >= 60){
+                setPostSeniority(minutes + "min")
+            }
+            if(minutes >= 60){
+                setPostSeniority(hours + "h")
+            }
+            if(hours >= 24){
+                setPostSeniority(days + "d")
+            }
+        }
+    }, [])
+
   return (
     <div className='post'>
         <div className="post-header">
@@ -26,7 +52,7 @@ const Post = ({ avatar, name, description, content }) => {
                     <h3>{name}</h3>
                     <p>{description}</p>
                     <div className="post-publishing-time">
-                        <span>2h . </span>
+                        <span>{postSeniority} . </span>
                         <img src={VisibilityPublic} alt="public" />
                     </div>
                 </div>

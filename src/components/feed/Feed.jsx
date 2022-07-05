@@ -29,7 +29,7 @@ const Feed = () => {
       db.collection("posts").add({  
         avatar: user.photoURL,
         name: user.displayName,
-        description: "Front-end Web Developer",
+        description: "New User",
         content: input,
         timestamp: firebase.firestore.FieldValue.serverTimestamp()
       })
@@ -49,6 +49,7 @@ const Feed = () => {
           name={name}
           description={description}
           content={content}
+          timestamp={timestamp}
         />
       ))}
     </div>

@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import Sidebar from './components/sidebar/Sidebar';
 import Login from './components/login/Login';
 import Feed from './components/feed/Feed';
+import Widgets from './components/widgets/Widgets';
 import { useSelector, useDispatch } from 'react-redux';
 import { login, logout, selectUser } from './features/userSlice';
 import { auth } from "./firebase"
@@ -36,6 +37,7 @@ const App = () => {
           <div className="body-content container">
             <Sidebar />
             <Feed />
+            <Widgets />
           </div>
         </>
       )}
