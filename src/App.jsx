@@ -22,7 +22,8 @@ const App = () => {
           uid : userAuth.uid,
           displayName: userAuth.displayName,
           photoURL: userAuth.photoURL,
-        }))
+          description: userAuth.description,
+        }));
       } else {  
         dispatch(logout())
       } 

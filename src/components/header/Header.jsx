@@ -74,7 +74,7 @@ const Header = () => {
                                 title="Notifications"
                             />
                             <a className="nav-link" onClick={showDropDownMeny} href="/">
-                                <img key={user.photoURL} src={user.photoURL} className="avatar" alt="avatar" width="24" height="24"/>
+                                <img src={user.photoURL} className="avatar" alt="avatar" width="24" height="24"/>
                                 <div className="content">
                                     <span className='nav-title'>Me</span>
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" data-supported-dps="16x16" fill="currentColor" class="mercado-match" width="16" height="16" focusable="false">

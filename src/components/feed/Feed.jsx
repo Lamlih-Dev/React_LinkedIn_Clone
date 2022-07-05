@@ -38,11 +38,10 @@ const Feed = () => {
 
     setInput("");
   }
-
   return (
     <div className='feed'>
       <FeedStartPost sendPost={sendPost} input={input} setInput={setInput} avatar={user.photoURL} />
-      {posts.map(({id, data: { avatar, name, description, content, timestamp }})=>(
+      {posts.map(({id, data: { avatar, name, description, content, timestamp, comments }})=>(
         <Post 
           key={id}
           avatar={avatar}
@@ -50,6 +49,7 @@ const Feed = () => {
           description={description}
           content={content}
           timestamp={timestamp}
+          comments={comments}
         />
       ))}
     </div>

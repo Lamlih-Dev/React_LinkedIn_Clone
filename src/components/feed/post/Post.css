@@ -1,9 +1,12 @@
 .post{
     background-color: white;
-    padding: 15px 15px 5px 15px;
     border-radius: 10px;
     margin-bottom: 10px;
     border: 1px solid #E0DFDC;
+    overflow: hidden;
+}
+.post-section{
+    padding: 15px 15px 5px 15px;
 }
 .post-header{
     display: flex;

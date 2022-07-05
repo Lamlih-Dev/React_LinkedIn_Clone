@@ -2,6 +2,9 @@
     margin-top: 75px;
     display: flex;
 }
+img{
+    object-fit: cover !important;
+}
 @media screen and (max-width: 767px) {
     .body-content{
         flex-direction: column;

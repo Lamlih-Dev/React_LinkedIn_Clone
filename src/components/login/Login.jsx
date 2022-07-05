@@ -12,6 +12,7 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [avatarurl, setAvatarurl] = useState("");
+  const [description, setDescription] = useState("New User");
   const [signUp, setSignUp] = useState(false);
   const dispatch = useDispatch("");
   const validRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -40,14 +41,14 @@ const Login = () => {
         userAuth.user.updateProfile({
           displayName: fullname,
           photoURL: avatarurl,
-          description: "New User",
+          description: description,
         }).then(()=>{
           dispatch(login({
             email: userAuth.user.email,
             uid : userAuth.user.uid,
             displayName: fullname,
             photoURL: avatarurl,
-            description: "New User",
+            description: description,
           }))
         })
       }).catch(error => alert(error));
