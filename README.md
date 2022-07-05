@@ -1,46 +1,11 @@
-# Getting Started with Create React App and Redux
+# LinkedIn Clone Using React & Redux (Frontend) And Firebase (Backend)
+After learning React JS and beeing comfortable with it, i decided to clone LinkedIn. This is not like any other LinkedIn clone, most of them just clone the feed section
+and that's it, just a single static page, but here it's a fully responsive (tablet, mobile, laptop) dynamic clone with email & google authentification, everything connected to the database using firebase.
+<br />
+<h1>Feed View</h1>
+<img src="https://user-images.githubusercontent.com/87146845/177407225-8953cc78-e048-4aee-8f5c-a044538bf784.png" />
+<h1>Login View</h1>
+<img src="https://user-images.githubusercontent.com/87146845/177406952-963a52fc-b03c-4fc7-997a-78a17bc31c13.png" />
+<h1>Registration View</h1>
+<img src="https://user-images.githubusercontent.com/87146845/177407052-0add8d4b-06ae-4d5a-b7a2-cbee33d549ba.png" />
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
